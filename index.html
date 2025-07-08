@@ -5,23 +5,43 @@
   <title>Audios de la familia</title>
   <style>
     body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 50px;
+  background: url('fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  ...
+}
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
     }
-    button {
-      margin: 20px;
+
+    .button {
+      background-color: #d4a373;
+      color: white;
+      border: none;
       padding: 15px 30px;
-      font-size: 16px;
+      margin: 10px;
+      font-size: 18px;
+      border-radius: 8px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #b07d56;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #7a6a58;
     }
   </style>
 </head>
 <body>
-  <h1>¿A quién quieres escuchar?</h1>
+  <h1>Escucha las voces de<br>Abuela Lala y Abuelo Alfonso</h1>
 
-  <button onclick="document.getElementById('audio1').play()">👵 Escuchar a la Abuela</button>
-  <button onclick="document.getElementById('audio2').play()">👴 Escuchar al Abuelo</button>
+  <button class="button" onclick="document.getElementById('audio1').play()">👵 Escuchar a la Abuela</button>
+  <button class="button" onclick="document.getElementById('audio2').play()">👴 Escuchar al Abuelo</button>
 
   <audio id="audio1">
     <source src="abuela.mp3" type="audio/mpeg">
@@ -30,5 +50,9 @@
   <audio id="audio2">
     <source src="abuelo.mp3" type="audio/mpeg">
   </audio>
+
+  <footer>
+    Con amor, de tu familia ❤️
+  </footer>
 </body>
 </html>
